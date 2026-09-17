@@ -12,7 +12,7 @@ function BlogOverview() {
                 {data.map((post) => (
                     <li key={post.id}>
                         <p><Link to={`/posts/${post.id}`}>{post.title}</Link> ({post.author})</p>
-                        <p>Reacties: {post.comments} - {post.shares} keer gedeeld</p>
+                        <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
                     </li>
                 ))}
             </ul>
