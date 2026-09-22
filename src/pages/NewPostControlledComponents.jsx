@@ -1,9 +1,10 @@
-import './NewPost.css';
+import './NewPostControlledComponents.css';
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {calculateReadTime} from "../helpers/calculateReadTime.js";
+import {InputField} from "../assets/components/InputField.jsx";
 
-function NewPost() {
+function NewPostControlledComponents() {
 
     const [title, setTitle] = useState("");
     const [subtitle, setSubtitle] = useState("");
@@ -41,14 +42,12 @@ function NewPost() {
         <main className="new-post">
             <h1>Nieuwe post</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="title">Titel: </label>
-                <input type="text" placeholder="Vul titel in" name="title" id="title" required value={title} onChange={(event) => setTitle(event.target.value)} />
 
-                <label htmlFor="sub-title">Subtitel: </label>
-                <input type="text" placeholder="Vul subtitel in" name="sub-title" id="sub-title" required value={subtitle} onChange={(event) => setSubtitle(event.target.value)} />
+                <InputField label="Titel" id="title" placeholder="Vul titel in" value={title} onChange={(event) => setTitle(event.target.value)} />
 
-                <label htmlFor="author">Auteur: </label>
-                <input type="text" placeholder="Vul auteur in" name="author" id="author" required value={author} onChange={(event) => setAuthor(event.target.value)} />
+                <InputField label="Subtitel" id="sub-title" placeholder="Vul subtitel in" value={subtitle} onChange={(event) => setSubtitle(event.target.value)} />
+
+                <InputField label="Auteur" id="author" placeholder="Vul auteur in" value={author} onChange={(event) => setAuthor(event.target.value)} />
 
                 <label htmlFor="message">Bericht: </label>
                 <textarea placeholder="Typ bericht" name="message" id="message" required value={message} minLength={300} maxLength={2000} onChange={(event) => setMessage(event.target.value)} />
@@ -59,4 +58,4 @@ function NewPost() {
     );
 }
 
-export default NewPost;
+export default NewPostControlledComponents;
