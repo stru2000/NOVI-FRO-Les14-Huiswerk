@@ -1,8 +1,10 @@
-import './NewPostReactHook.css';
+import './NewPost.css';
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { calculateReadTime } from "../helpers/calculateReadTime.js";
-import { InputField } from "../assets/components/InputField.jsx";
+import { InputField } from "../components/InputField.jsx";
+import {TextAreaField} from "../components/TextAreaField.jsx";
+import {Button} from "../components/Button.jsx";
 
 function NewPostReactHook() {
     const { register, handleSubmit } = useForm();
@@ -26,7 +28,7 @@ function NewPostReactHook() {
 
     return (
         <main className="new-post">
-            <h1>Nieuwe post</h1>
+            <h1>Nieuwe post met React Hook Form</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <InputField label="Titel" id="title" placeholder="Vul titel in" registration={register("title")} />
@@ -35,10 +37,9 @@ function NewPostReactHook() {
 
                 <InputField label="Auteur" id="author" placeholder="Vul auteur in" registration={register("author")} />
 
-                <label htmlFor="message">Bericht: </label>
-                <textarea placeholder="Typ bericht" id="message" required minLength={300} maxLength={2000} {...register("content")} />
+                <TextAreaField registration={register("content")} />
 
-                <button type="submit">Verzenden</button>
+                <Button />
             </form>
         </main>
     );

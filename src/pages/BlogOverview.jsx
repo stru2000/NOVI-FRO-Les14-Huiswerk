@@ -1,19 +1,16 @@
 import './BlogOverview.css';
-import {Link} from "react-router-dom";
 import data from '../constants/data.json'
+import { BlogPostItem } from "../components/BlogPostItem.jsx";
 
 function BlogOverview() {
 
     return (
         <main>
-            <h1>Blogoverview</h1>
+            <h1>Bekijk alle {data.length} posts op het platform</h1>
 
             <ul>
                 {data.map((post) => (
-                    <li key={post.id}>
-                        <p><Link to={`/posts/${post.id}`}>{post.title}</Link> ({post.author})</p>
-                        <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
-                    </li>
+                    <BlogPostItem key={post.id} post={post} />
                 ))}
             </ul>
         </main>

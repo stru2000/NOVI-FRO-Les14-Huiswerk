@@ -29,15 +29,6 @@ button, input, select, textarea {
   font-family: inherit;
 }
 
-nav ul {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  list-style: none;
-  background-color: var(--color-secondary);
-  padding: 2rem;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

@@ -1,0 +1,80 @@
+/* ---------- BLOGPOST PAGINA ---------- */
+
+.blog-post-page {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------- BLOGPOST CONTENT ---------- */
+
+.blog-post {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    flex: 1;
+    color: var(--color-secondary);
+}
+
+
+/* ---------- TITELS ---------- */
+
+.blog-post h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.blog-post h2 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+}
+
+
+/* ---------- POST INFORMATIE ---------- */
+
+.blog-post-info {
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-read-time {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- POST INHOUD ---------- */
+
+.blog-post-content {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ---------- TERUG LINK ---------- */
+
+.blog-post-back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.blog-post-page footer {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: bold;
+}

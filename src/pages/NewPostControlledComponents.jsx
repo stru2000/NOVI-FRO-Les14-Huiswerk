@@ -1,8 +1,10 @@
-import './NewPostControlledComponents.css';
+import './NewPost.css';
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {calculateReadTime} from "../helpers/calculateReadTime.js";
-import {InputField} from "../assets/components/InputField.jsx";
+import {InputField} from "../components/InputField.jsx";
+import {TextAreaField} from "../components/TextAreaField.jsx";
+import {Button} from "../components/Button.jsx";
 
 function NewPostControlledComponents() {
 
@@ -40,7 +42,7 @@ function NewPostControlledComponents() {
 
     return (
         <main className="new-post">
-            <h1>Nieuwe post</h1>
+            <h1>Nieuwe post met Controlled Components</h1>
             <form onSubmit={handleSubmit}>
 
                 <InputField label="Titel" id="title" placeholder="Vul titel in" value={title} onChange={(event) => setTitle(event.target.value)} />
@@ -49,10 +51,9 @@ function NewPostControlledComponents() {
 
                 <InputField label="Auteur" id="author" placeholder="Vul auteur in" value={author} onChange={(event) => setAuthor(event.target.value)} />
 
-                <label htmlFor="message">Bericht: </label>
-                <textarea placeholder="Typ bericht" name="message" id="message" required value={message} minLength={300} maxLength={2000} onChange={(event) => setMessage(event.target.value)} />
+                <TextAreaField onChange={(event) => setMessage(event.target.value)} />
 
-                <button type="submit">Verzenden</button>
+                <Button />
             </form>
         </main>
     );

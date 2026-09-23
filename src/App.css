@@ -1,10 +1,75 @@
+/* ---------- ALGEMENE APP-LAYOUT ---------- */
+
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+
+/* ---------- NAVIGATIE ---------- */
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-secondary);
+    padding: 1.5rem 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.App-logo {
+    width: 140px;
+}
+
+
+/* ---------- PAGINA-LAYOUT ---------- */
+
+.outer-container {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+}
+
+.inner-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------- HOME ---------- */
+
 .page-container {
     width: 100%;
-    height: 100vh;
+    flex: 1;
     color: white;
     background: rgb(44,47,57);
-    /*Wil jij ook zo'n coole gradient maken? Deze is gemaakt via https://cssgradient.io/ - kind kan de was doen!*/
-    background: linear-gradient(37deg, rgba(44,47,57,1) 0%, rgba(0,0,0,1) 8%, rgba(80,83,92,1) 100%);
+    background: linear-gradient(
+        37deg,
+        rgba(44,47,57,1) 0%,
+        rgba(0,0,0,1) 8%,
+        rgba(80,83,92,1) 100%
+    );
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,4 +78,48 @@
 
 .page-container img {
     width: 500px;
+    max-width: 100%;
+}
+
+/* ---------- MEDIA TABLET ---------- */
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .App-logo {
+        width: 120px;
+    }
+}
+
+
+/* ---------- MEDIA MOBIEL ---------- */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .page-container {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .page-container img {
+        width: 100%;
+        max-width: 400px;
+    }
 }

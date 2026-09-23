@@ -1,9 +1,0 @@
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.new-post {
-    padding-left: 1rem;
-}
