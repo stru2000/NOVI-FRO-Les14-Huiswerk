@@ -7,6 +7,7 @@ import BlogOverview from './pages/BlogOverview.jsx';
 import NotFound from './pages/NotFound.jsx';
 import logo from './assets/logo-medium.png'
 import BlogPost from "./pages/BlogPost.jsx";
+import BlogOverviewTest from "./pages/BlogOverviewTest.jsx";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                         <Route path="/new-post-reacthook" element={<NewPostReactHook />} />
                         <Route path="*" element={<NotFound />} />
                         <Route path="/posts/:id" element={<BlogPost />} />
+                        <Route path="/blogtest" element={<BlogOverviewTest />} />
                     </Routes>
                 </div>
             </div>
