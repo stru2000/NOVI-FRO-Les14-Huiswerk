@@ -1,0 +1,6 @@
+.post-item {
+    background-color: var(--color-white);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}

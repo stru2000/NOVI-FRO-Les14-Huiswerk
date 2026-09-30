@@ -22,16 +22,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background-color: var(--color-tertiary);
 }
 
 button, input, select, textarea {
   font-family: inherit;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-block: 0.67em;
 }
 
 h1 {
